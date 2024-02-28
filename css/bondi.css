@@ -1,0 +1,202 @@
+/* start global rules  */
+:root{
+    --dark-color:#19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color:#ffc400;
+    --section-color:#eff7fa;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: unset;
+}
+.btn-main{
+    background-color:var(--red-color);
+    color: var(--yellow-color);
+}
+.btn-main:hover{
+    background-color:var(--red-color);
+    color: var(--yellow-color);
+}
+.main-heading::after{
+    content:"";
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+/* end global rules  */
+/* start navbar */
+.navbar{
+    background-color: var(--dark-color);
+}
+.navbar .navbar-toggler{
+    color: white;
+    border: 1px solid white;
+    font-size: 25px;
+}
+.navbar .nav-item .nav-link{
+    color: white;
+    
+}
+.navbar .nav-item .nav-link.active 
+,.navbar .nav-item .nav-link:hover
+,.navbar .nav-item .nav-link:focus
+{
+    color: var(--green-color);
+}
+.navbar .search{
+    border-left: 1px solid var(--green-color) ;
+}
+.navbar .search svg{
+    color: var(--green-color);
+}
+
+/* end navbar */
+/* start landing  */
+.landing{
+    background-color: var(--dark-color);
+    height: calc(100vh - 60px );
+}
+/* end landing  */
+/* start features */
+.features .icons{
+    height: 200px;
+}
+.features .icons svg{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.features .icons .number{
+    color: var(--section-color);
+}
+.features .icons .icon{
+    color: var(--green-color);
+}
+.features h4{
+    color: var(--yellow-color);
+}
+/* end features */
+/* start ourwork */
+.our-work{
+    background-color: var(--section-color);
+    padding: 1rem 0;
+}
+.our-work ul li{
+    cursor: pointer;
+}
+.our-work ul li.active{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+.our-work ul li:not(.active):hover{
+    color: var(--red-color);
+}
+.our-work .img-container{
+    margin-bottom: 1.5rem;
+    padding-right: 15px;
+    padding-left: 0;
+    overflow: hidden;
+}
+@media (max-width:577px){
+    .our-work .img-container{
+        padding: 0;
+    }
+}
+.our-work .img-container img{
+    border: 5px solid white;
+}
+.our-work .img-container::before{
+    content: attr(data-value);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 23px);
+    left: calc(50% - 7px);
+    height: calc(100% - 8px);
+    top: 50%;
+    transform: translate(calc(-159%) , -50%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #33d1ccbe;
+    transition: 0.3s;
+}
+.our-work .img-container:hover::before{
+    transform: translate(-50% , -50%);
+    
+}
+/* end ourwork */
+/* start about  */
+.about .paragraph{
+    max-width: 500px;
+}
+/* end about  */
+/* start team  */
+.team {
+    background-color: var(--section-color);
+}
+.team .head h2{
+    color: var(--yellow-color);
+    font-weight: bold;
+}
+.team .box h3{
+    background-color: var(--green-color);
+}
+
+/* end team  */
+/* start project  */
+.project{
+    background-color: var(--dark-color);
+}
+/* end project  */
+/* start subscribe  */
+.subscribe{
+    background-color: var(--yellow-color);
+}
+.subscribe input[type=email]{
+    border: none;
+    border-bottom: 1px solid white;
+    
+}
+.subscribe input[type=email]::placeholder{
+    color: white;
+}
+.subscribe input[type=email]:focus{
+    outline: none;
+}
+.subscribe .btn{
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+    
+}
+/* end subscribe  */
+/* start footer  */
+footer{
+    background-color: var(--dark-color);
+}
+footer .contact ul li i{
+    height: 15px;
+    width: 15px;
+}
+footer .contact ul .facebook{
+    background-color:#1877f2 ;
+}
+footer .contact ul .twitter{
+    background-color:#1da1f2 ;
+}
+footer .contact ul .linkedin{
+    background-color:#0a66c2 ;
+}
+footer .contact ul .youtube{
+    background-color:#ff0000 ;
+}
+/* end footer  */
